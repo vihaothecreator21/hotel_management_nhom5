@@ -18,3 +18,4 @@ namespace hotel_management_nhom5.Models
         public List<Booking> Bookings { get; set; } = new List<Booking>();
     }
 }
+
