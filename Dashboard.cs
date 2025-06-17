@@ -80,7 +80,11 @@ namespace hotel_management_nhom5
             }
         }
 
-        
+        private void btnRoomTypes_Click(object sender, EventArgs e)
+        {
+            RoomTypeForm form = new RoomTypeForm();
+            form.ShowDialog();
+        }
     }
 }
     
