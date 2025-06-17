@@ -13,6 +13,7 @@ namespace hotel_management_nhom5.Data
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Staff> Staffs { get; set; }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

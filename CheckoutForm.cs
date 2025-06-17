@@ -60,8 +60,8 @@ namespace hotel_management_nhom5
                     var review = new Review
                     {
                         RoomId = room.RoomId,
-                        Content = txtReview.Text,
-                        Created_at = DateTime.Now
+                        Comment = txtReview.Text,
+                        CreatedAt = DateTime.Now
                     };
 
                     db.Reviews.Add(review);

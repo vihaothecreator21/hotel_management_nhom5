@@ -17,6 +17,6 @@ namespace hotel_management_nhom5.Models
         public Booking Booking { get; set; }
         public decimal Rating { get; set; }
         public string Comment { get; set; }
-        public DateTime Created_at { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

@@ -14,6 +14,7 @@ namespace hotel_management_nhom5.Models
         public string Email { get; set; }
         public string Identity_Card { get; set; }
         public DateTime Created_at { get; set; }
+        public string Name { get; set; }
 
         public List<Booking> Bookings { get; set; } = new List<Booking>();
     }
