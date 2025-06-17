@@ -35,32 +35,48 @@ namespace hotel_management_nhom5
 
         private void btnBook_Click(object sender, EventArgs e)
         {
-            int customerId = (int)cbCustomer.SelectedValue;
-            int roomId = (int)cbRoom.SelectedValue;
+            string customerName = cbCustomer.Text;
 
             using (var db = new AppDbContext())
             {
-                var booking = new Booking
+                int customerId;
+                var existingCustomer = db.Customers.FirstOrDefault(c => c.Name == customerName);
+                if (existingCustomer == null)
                 {
-                    CustomerId = customerId,
-                    RoomId = roomId,
-                    BookingDate = DateTime.Now,
-                    Status = "Đã đặt"
-                };
-
-                db.Bookings.Add(booking);
-
-                var room = db.Rooms.Find(roomId);
-                if (room != null)
+                    var newCustomer = new Customer { Name = customerName };
+                    db.Customers.Add(newCustomer);
+                    db.SaveChanges();
+                    customerId = newCustomer.CustomerId;
+                }
+                else
                 {
-                    room.Status = "Đã đặt";
+                    customerId = existingCustomer.CustomerId;
                 }
 
-                db.SaveChanges();
-            }
+                int roomId = (int)cbRoom.SelectedValue;
+                {
+                    var booking = new Booking
+                    {
+                        CustomerId = customerId,
+                        RoomId = roomId,
+                        BookingDate = DateTime.Now,
+                        Status = "Đã đặt"
+                    };
 
-            MessageBox.Show("Đặt phòng thành công!");
-            this.Close();
+                    db.Bookings.Add(booking);
+
+                    var room = db.Rooms.Find(roomId);
+                    if (room != null)
+                    {
+                        room.Status = "Đã đặt";
+                    }
+
+                    db.SaveChanges();
+                }
+
+                MessageBox.Show("Đặt phòng thành công!");
+                this.Close();
+            }
         }
     }
 }

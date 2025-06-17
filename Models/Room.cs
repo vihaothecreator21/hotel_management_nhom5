@@ -13,7 +13,7 @@ namespace hotel_management_nhom5.Models
         public string Type { get; set; }
         public decimal Price { get; set; }
         public string Status { get; set; }
-
+        public string RoomNumber { get; set; }
         public List<Review> Reviews { get; set; } = new List<Review>();
     }
 }
