@@ -24,6 +24,6 @@ namespace hotel_management_nhom5.Models
         public string Status { get; set; }
 
         public List<Review> Reviews { get; set; } = new List<Review>();
-        
+        public DateTime BookingDate { get; set; }
     }
 }
