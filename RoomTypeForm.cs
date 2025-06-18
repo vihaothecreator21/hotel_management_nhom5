@@ -106,5 +106,10 @@ namespace hotel_management_nhom5
             cbCategory.SelectedIndex = 0;
             selectedId = -1;
         }
+
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
