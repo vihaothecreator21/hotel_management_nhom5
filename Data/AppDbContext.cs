@@ -6,6 +6,8 @@ namespace hotel_management_nhom5.Data
 {
     public class AppDbContext : DbContext
     {
+        private DbSet<RoomType> roomTypes;
+
         public AppDbContext() : base("name=DefaultConnection") { }
 
         public DbSet<Room> Rooms { get; set; }
@@ -13,6 +15,14 @@ namespace hotel_management_nhom5.Data
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Staff> Staffs { get; set; }
+ 
+
+        public DbSet<Room> Room { get; set; }
+
+        public DbSet<RoomType> RoomTypes { get; set; }
+
+
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
