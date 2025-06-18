@@ -13,6 +13,9 @@ namespace hotel_management_nhom5.Models
         public string Type { get; set; }
         public decimal Price { get; set; }
         public string Status { get; set; }
+        public string RoomName { get; set; }
+        public string ImagePath { get; set; }
+        public RoomStatusEnumHelper.RoomStatusEnum RoomStatus { get; set; }
 
         public List<Review> Reviews { get; set; } = new List<Review>();
     }
