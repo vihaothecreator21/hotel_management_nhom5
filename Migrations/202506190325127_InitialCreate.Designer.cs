@@ -13,7 +13,7 @@ namespace hotel_management_nhom5.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202506130335344_InitialCreate"; }
+            get { return "202506190325127_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
