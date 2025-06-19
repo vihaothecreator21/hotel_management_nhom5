@@ -24,5 +24,14 @@ namespace hotel_management_nhom5.Models
         public BookingStatus Status { get; set; } = BookingStatus.Booked;
 
         public List<Review> Reviews { get; set; } = new List<Review>();
+      
+        public string GuestName => Customer?.FullName ?? "";
+
+     
+        public string RoomNumber => Room?.RoomNumber ?? "";
+
+      
+        public string CheckInOut
+            => $"{CheckIn:dd/MM/yyyy} → {CheckOut:dd/MM/yyyy}";
     }
 }
