@@ -47,7 +47,7 @@ namespace hotel_management_nhom5
                     var customersCount = context.Customers.Count();
                     var bookingsCount = context.Bookings.Count();
                     var reviewsCount = context.Reviews.Count();
-                    var staffsCount = context.Staffs.Count();
+           
 
                     string message = $@"✅ Database HotelDb đã được tạo thành công!
 
@@ -56,7 +56,7 @@ namespace hotel_management_nhom5
 • Customers: {customersCount} records  
 • Bookings: {bookingsCount} records
 • Reviews: {reviewsCount} records
-• Staffs: {staffsCount} records
+
 
 🔗 Connection: {context.Database.Connection.DataSource}
 📁 Database: {context.Database.Connection.Database}";
@@ -80,7 +80,15 @@ namespace hotel_management_nhom5
             }
         }
 
-        
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

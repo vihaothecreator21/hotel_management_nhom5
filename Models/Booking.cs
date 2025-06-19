@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace hotel_management_nhom5.Models
 {
@@ -10,20 +7,22 @@ namespace hotel_management_nhom5.Models
     {
         public int BookingId { get; set; }
 
+        // Foreign keys
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
-
         public int RoomId { get; set; }
+
+        // Navigation
+        public Customer Customer { get; set; }
         public Room Room { get; set; }
 
-        public DateTime Check_in { get; set; }
-        public DateTime Check_out { get; set; }
+        // Booking info
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
         public TimeSpan Duration { get; set; }
-        public decimal Total_Price { get; set; }
-        public DateTime Booking_Date { get; set; }
-        public string Status { get; set; }
+        public decimal TotalPrice { get; set; }
+        public DateTime BookingDate { get; set; }
+        public BookingStatus Status { get; set; } = BookingStatus.Booked;
 
         public List<Review> Reviews { get; set; } = new List<Review>();
-        public DateTime BookingDate { get; set; }
     }
 }

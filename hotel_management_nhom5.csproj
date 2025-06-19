@@ -97,10 +97,10 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\BookingStatus.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\Room.cs" />
-    <Compile Include="Models\Staff.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dashboard.resx">
