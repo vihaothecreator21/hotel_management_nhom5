@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace hotel_management_nhom5.Models
 {
@@ -6,6 +7,7 @@ namespace hotel_management_nhom5.Models
     {
         public int RoomId { get; set; }
         public string RoomNumber { get; set; }
+        [Column("Room_number")]
         public string Type { get; set; }
         public decimal Price { get; set; }
         public string Status { get; set; }
