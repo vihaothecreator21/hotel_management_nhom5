@@ -34,18 +34,18 @@ namespace hotel_management_nhom5
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCustomers = new Guna.UI2.WinForms.Guna2Button();
             this.btnCheckDB = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCheckOut = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReviews_Click = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBookings = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -118,14 +118,14 @@ namespace hotel_management_nhom5
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2Panel1.Controls.Add(this.guna2Button8);
+            this.guna2Panel1.Controls.Add(this.btnCustomers);
             this.guna2Panel1.Controls.Add(this.btnCheckDB);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel20);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel19);
-            this.guna2Panel1.Controls.Add(this.guna2Button5);
-            this.guna2Panel1.Controls.Add(this.guna2Button4);
+            this.guna2Panel1.Controls.Add(this.btnCheckOut);
+            this.guna2Panel1.Controls.Add(this.btnReviews_Click);
             this.guna2Panel1.Controls.Add(this.guna2Button3);
-            this.guna2Panel1.Controls.Add(this.guna2Button2);
+            this.guna2Panel1.Controls.Add(this.btnBookings);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -134,24 +134,25 @@ namespace hotel_management_nhom5
             this.guna2Panel1.Size = new System.Drawing.Size(209, 779);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2Button8
+            // btnCustomers
             // 
-            this.guna2Button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button8.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button8.Image = global::hotel_management_nhom5.Properties.Resources.icons8_settings_30;
-            this.guna2Button8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button8.Location = new System.Drawing.Point(0, 318);
-            this.guna2Button8.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(209, 56);
-            this.guna2Button8.TabIndex = 12;
-            this.guna2Button8.Text = "Customer";
+            this.btnCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCustomers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCustomers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCustomers.FillColor = System.Drawing.Color.Transparent;
+            this.btnCustomers.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCustomers.ForeColor = System.Drawing.Color.Black;
+            this.btnCustomers.Image = global::hotel_management_nhom5.Properties.Resources.icons8_settings_30;
+            this.btnCustomers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCustomers.Location = new System.Drawing.Point(0, 320);
+            this.btnCustomers.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCustomers.Name = "btnCustomers";
+            this.btnCustomers.Size = new System.Drawing.Size(209, 56);
+            this.btnCustomers.TabIndex = 12;
+            this.btnCustomers.Text = "Customer";
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
             // btnCheckDB
             // 
@@ -192,44 +193,44 @@ namespace hotel_management_nhom5
             this.guna2HtmlLabel19.TabIndex = 10;
             this.guna2HtmlLabel19.Text = "Bookings";
             // 
-            // guna2Button5
+            // btnCheckOut
             // 
-            this.guna2Button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Image = global::hotel_management_nhom5.Properties.Resources.icons8_settings_30;
-            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.Location = new System.Drawing.Point(0, 258);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(209, 54);
-            this.guna2Button5.TabIndex = 5;
-            this.guna2Button5.Text = "Check Out";
+            this.btnCheckOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCheckOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCheckOut.FillColor = System.Drawing.Color.Transparent;
+            this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCheckOut.ForeColor = System.Drawing.Color.Black;
+            this.btnCheckOut.Image = global::hotel_management_nhom5.Properties.Resources.icons8_settings_30;
+            this.btnCheckOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCheckOut.Location = new System.Drawing.Point(0, 258);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(209, 54);
+            this.btnCheckOut.TabIndex = 5;
+            this.btnCheckOut.Text = "Check Out";
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
-            // guna2Button4
+            // btnReviews_Click
             // 
-            this.guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Image = global::hotel_management_nhom5.Properties.Resources.icons8_review_30;
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.Location = new System.Drawing.Point(0, 374);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(209, 63);
-            this.guna2Button4.TabIndex = 4;
-            this.guna2Button4.Text = "Reviews";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.btnReviews_Click.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReviews_Click.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReviews_Click.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReviews_Click.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReviews_Click.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReviews_Click.FillColor = System.Drawing.Color.Transparent;
+            this.btnReviews_Click.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnReviews_Click.ForeColor = System.Drawing.Color.Black;
+            this.btnReviews_Click.Image = global::hotel_management_nhom5.Properties.Resources.icons8_review_30;
+            this.btnReviews_Click.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReviews_Click.Location = new System.Drawing.Point(0, 374);
+            this.btnReviews_Click.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReviews_Click.Name = "btnReviews_Click";
+            this.btnReviews_Click.Size = new System.Drawing.Size(209, 63);
+            this.btnReviews_Click.TabIndex = 4;
+            this.btnReviews_Click.Text = "Reviews";
             // 
             // guna2Button3
             // 
@@ -249,26 +250,26 @@ namespace hotel_management_nhom5
             this.guna2Button3.Size = new System.Drawing.Size(209, 50);
             this.guna2Button3.TabIndex = 3;
             this.guna2Button3.Text = "Rooms";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
-            // guna2Button2
+            // btnBookings
             // 
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Image = global::hotel_management_nhom5.Properties.Resources.icons8_reservation_30;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 140);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(209, 57);
-            this.guna2Button2.TabIndex = 2;
-            this.guna2Button2.Text = "Bookings";
+            this.btnBookings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBookings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBookings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBookings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBookings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBookings.FillColor = System.Drawing.Color.Transparent;
+            this.btnBookings.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnBookings.ForeColor = System.Drawing.Color.Black;
+            this.btnBookings.Image = global::hotel_management_nhom5.Properties.Resources.icons8_reservation_30;
+            this.btnBookings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBookings.Location = new System.Drawing.Point(0, 140);
+            this.btnBookings.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBookings.Name = "btnBookings";
+            this.btnBookings.Size = new System.Drawing.Size(209, 57);
+            this.btnBookings.TabIndex = 2;
+            this.btnBookings.Text = "Bookings";
+            this.btnBookings.Click += new System.EventHandler(this.btnBookings_Click_Click);
             // 
             // guna2Button1
             // 
@@ -975,17 +976,17 @@ namespace hotel_management_nhom5
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(595, 223);
             this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(611, 214);
             this.chart1.TabIndex = 10;
             this.chart1.Text = "chart1";
@@ -1032,6 +1033,7 @@ namespace hotel_management_nhom5
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
@@ -1059,10 +1061,10 @@ namespace hotel_management_nhom5
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnCheckOut;
+        private Guna.UI2.WinForms.Guna2Button btnReviews_Click;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnBookings;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
@@ -1123,6 +1125,6 @@ namespace hotel_management_nhom5
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnCheckDB;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button btnCustomers;
     }
 }
