@@ -78,6 +78,24 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingForm.Designer.cs">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOutForm.Designer.cs">
+      <DependentUpon>CheckOutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +121,20 @@
     <Compile Include="Models\Room.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Implementations\BookingRepository.cs" />
+    <Compile Include="Repositories\Implementations\CustomerRepository.cs" />
+    <Compile Include="Repositories\Implementations\ReviewRepository.cs" />
+    <Compile Include="Repositories\Implementations\RoomRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICustomerRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IBookingRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IReviewRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IRoomRepository.cs" />
+    <EmbeddedResource Include="BookingForm.resx">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
