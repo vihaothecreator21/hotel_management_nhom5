@@ -16,5 +16,20 @@ namespace hotel_management_nhom5
         {
             InitializeComponent();
         }
+
+        private void INFORMATION_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckOutForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
