@@ -15,6 +15,7 @@ namespace hotel_management_nhom5
 {
     public partial class CustomerForm : Form
     {
+        
         private readonly ICustomerRepository _custRepo = new CustomerRepository();
         private readonly IBookingRepository _resRepo = new BookingRepository();
         private BindingList<Booking> _list;
@@ -59,6 +60,11 @@ namespace hotel_management_nhom5
         }
 
         private void dgvCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtSearchId_TextChanged(object sender, EventArgs e)
         {
 
         }

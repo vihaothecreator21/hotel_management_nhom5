@@ -12,8 +12,9 @@ namespace hotel_management_nhom5
         {
             InitializeComponent();
             this.FormClosed += (s, e) => Application.Exit();
-
            
+
+
         }
 
         private void OpenBookingForm()

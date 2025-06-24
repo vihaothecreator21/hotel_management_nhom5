@@ -22,6 +22,7 @@ namespace hotel_management_nhom5
         {
             InitializeComponent();
             LoadRooms();
+            
         }
         private void LoadRooms()
         {
@@ -125,6 +126,11 @@ namespace hotel_management_nhom5
         }
 
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowRooms_Paint(object sender, PaintEventArgs e)
         {
 
         }

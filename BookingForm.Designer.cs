@@ -125,6 +125,7 @@
             this.flowRooms.Name = "flowRooms";
             this.flowRooms.Size = new System.Drawing.Size(1067, 450);
             this.flowRooms.TabIndex = 9;
+            this.flowRooms.Paint += new System.Windows.Forms.PaintEventHandler(this.flowRooms_Paint);
             // 
             // INFORMATION
             // 

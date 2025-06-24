@@ -35,11 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchId = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CheckInCheckOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,12 +52,6 @@
             this.dgvCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCustomers.ColumnHeadersHeight = 32;
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.col1,
-            this.RoomNumber,
-            this.CheckInCheckOut,
-            this.Status});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -132,6 +121,7 @@
             this.txtSearchId.SelectedText = "";
             this.txtSearchId.Size = new System.Drawing.Size(315, 54);
             this.txtSearchId.TabIndex = 15;
+            this.txtSearchId.TextChanged += new System.EventHandler(this.txtSearchId_TextChanged);
             // 
             // btnSearch
             // 
@@ -148,36 +138,6 @@
             this.btnSearch.TabIndex = 16;
             this.btnSearch.Text = "FIND";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Booking ID";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            // 
-            // col1
-            // 
-            this.col1.HeaderText = "GuestName";
-            this.col1.MinimumWidth = 6;
-            this.col1.Name = "col1";
-            // 
-            // RoomNumber
-            // 
-            this.RoomNumber.HeaderText = "Room Number";
-            this.RoomNumber.MinimumWidth = 6;
-            this.RoomNumber.Name = "RoomNumber";
-            // 
-            // CheckInCheckOut
-            // 
-            this.CheckInCheckOut.HeaderText = "Check-In & Check-Out";
-            this.CheckInCheckOut.MinimumWidth = 6;
-            this.CheckInCheckOut.Name = "CheckInCheckOut";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.MinimumWidth = 6;
-            this.Status.Name = "Status";
             // 
             // CustomerForm
             // 
@@ -202,10 +162,5 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchId;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CheckInCheckOut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }
