@@ -38,7 +38,7 @@
             this.a = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnConfirm = new Guna.UI2.WinForms.Guna2Button();
             this.INFORMATION.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +100,7 @@
             this.btnFind.Size = new System.Drawing.Size(251, 38);
             this.btnFind.TabIndex = 12;
             this.btnFind.Text = "FIND";
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // INFORMATION
             // 
@@ -124,26 +125,28 @@
             this.guna2RatingStar1.Size = new System.Drawing.Size(326, 28);
             this.guna2RatingStar1.TabIndex = 13;
             // 
-            // guna2Button1
+            // btnConfirm
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(477, 359);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 14;
-            this.guna2Button1.Text = "guna2Button1";
+            this.btnConfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfirm.FillColor = System.Drawing.Color.MediumAquamarine;
+            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Location = new System.Drawing.Point(477, 359);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(180, 45);
+            this.btnConfirm.TabIndex = 14;
+            this.btnConfirm.Text = "Check-Out";
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // CheckOutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 450);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.guna2RatingStar1);
             this.Controls.Add(this.INFORMATION);
             this.Name = "CheckOutForm";
@@ -166,6 +169,6 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow a;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnConfirm;
     }
 }

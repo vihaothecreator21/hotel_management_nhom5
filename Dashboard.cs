@@ -12,7 +12,8 @@ namespace hotel_management_nhom5
         {
             InitializeComponent();
             this.FormClosed += (s, e) => Application.Exit();
-           
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+
 
 
         }
@@ -119,6 +120,24 @@ namespace hotel_management_nhom5
         {
             using (var f = new CustomerForm())
                 f.ShowDialog();
+        }
+
+        private void btnReviews_Click_Click(object sender, EventArgs e)
+        {
+            using (var f = new ReviewForm())
+                f.ShowDialog();
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show(
+                  "Bạn có chắc chắn muốn thoát không?",
+                  "Xác nhận",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+                Application.Exit();
         }
     }
 }

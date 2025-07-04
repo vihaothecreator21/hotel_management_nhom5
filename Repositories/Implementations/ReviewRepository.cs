@@ -10,8 +10,11 @@ namespace hotel_management_nhom5.Repositories.Implementations
     {
         private readonly AppDbContext _db = new AppDbContext();
 
-        public IEnumerable<Review> GetAll() =>
-            _db.Reviews.ToList();
+        // CHÍNH XÁC: phải khai báo trả về IEnumerable<Review>
+        public IEnumerable<Review> GetAll()
+        {
+            return _db.Reviews.ToList();
+        }
 
         public void Add(Review r)
         {

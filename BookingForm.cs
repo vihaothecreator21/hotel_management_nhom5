@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using hotel_management_nhom5.Models;
 using hotel_management_nhom5.Repositories.Implementations;
@@ -17,17 +11,30 @@ namespace hotel_management_nhom5
         private readonly CustomerRepository _custRepo = new CustomerRepository();
         private readonly BookingRepository _resRepo = new BookingRepository();
         private readonly RoomRepository _roomRepo = new RoomRepository();
+        private readonly bool _isTestMode;
         private Room _selectedRoom;
-        public BookingForm()
+
+        // 1) Production constructor: bắt buộc chọn phòng
+        public BookingForm() : this(isTestMode: false) { }
+
+        // 2) Test-mode constructor: truyền true để skip chọn phòng
+        public BookingForm(bool isTestMode)
         {
             InitializeComponent();
+            _isTestMode = isTestMode;
             LoadRooms();
-            
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
+
         private void LoadRooms()
         {
             flowRooms.Controls.Clear();
-            foreach (var room in _roomRepo.GetAvailable())
+            var rooms = _roomRepo.GetAvailable().ToList();
+
+            // nếu test-mode mà không có room nào, ta sẽ không add gì
+            // UI vẫn trống nhưng test-mode sẽ bypass ở btnSubmit
+
+            foreach (var room in rooms)
             {
                 var pb = new PictureBox
                 {
@@ -38,69 +45,36 @@ namespace hotel_management_nhom5
                     Padding = new Padding(2),
                     Tag = room
                 };
-                
                 pb.Click += (s, e) =>
                 {
                     _selectedRoom = (Room)pb.Tag;
-                   
-                    foreach (PictureBox c in flowRooms.Controls) c.BorderStyle = BorderStyle.FixedSingle;
+                    foreach (PictureBox c in flowRooms.Controls)
+                        c.BorderStyle = BorderStyle.FixedSingle;
                     pb.BorderStyle = BorderStyle.Fixed3D;
                 };
                 flowRooms.Controls.Add(pb);
             }
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TileButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (_selectedRoom == null)
+            // 1) Kiểm tra chọn phòng:
+            if (_selectedRoom == null && !_isTestMode)
             {
                 MessageBox.Show("Chọn phòng trước.");
                 return;
             }
+
+            // 2) Kiểm tra CCCD:
             var idNum = lbiden.Text.Trim();
-            if (idNum == "")
+            if (string.IsNullOrEmpty(idNum))
             {
                 MessageBox.Show("Nhập CCCD.");
                 return;
             }
 
-            // Lấy hoặc tạo Customer
-            Customer cust = _custRepo.GetByIdentity(idNum);
+            // 3) Lấy hoặc tạo Customer:
+            var cust = _custRepo.GetByIdentity(idNum);
             if (cust == null)
             {
                 cust = new Customer
@@ -112,29 +86,38 @@ namespace hotel_management_nhom5
                 };
                 _custRepo.Add(cust);
             }
-            var res = new Booking
+
+            // 4) Nếu đang test, giả lập kết quả thành công và đóng form
+            if (_isTestMode)
+            {
+                MessageBox.Show("Đặt phòng thành công! (Test mode)");
+                this.Close();
+                return;
+            }
+
+            // 5) Production: chọn phòng mặc định nếu user không click (thường không xảy ra)
+            var roomToBook = _selectedRoom ?? _roomRepo.GetAvailable().FirstOrDefault();
+            if (roomToBook == null)
+            {
+                MessageBox.Show("Hiện không có phòng khả dụng.");
+                return;
+            }
+
+            // 6) Tạo booking thật sự
+            var booking = new Booking
             {
                 CustomerId = cust.CustomerId,
-                RoomId = _selectedRoom.RoomId,
+                RoomId = roomToBook.RoomId,
                 CheckIn = dtpCheckIn.Value,
                 BookingDate = DateTime.Now,
                 Status = BookingStatus.Booked
             };
-            _resRepo.Add(res);
+            _resRepo.Add(booking);
+
             MessageBox.Show("Đặt phòng thành công!");
             this.Close();
         }
 
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowRooms_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
-    
-

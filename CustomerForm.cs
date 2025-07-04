@@ -23,6 +23,7 @@ namespace hotel_management_nhom5
         {
             InitializeComponent();
             LoadData(Enumerable.Empty<Booking>());   // truyền vào danh sách trống ban đầu
+            this.AutoScaleMode = AutoScaleMode.Dpi;
 
         }
         private void LoadData(IEnumerable<Booking> source)
@@ -65,6 +66,11 @@ namespace hotel_management_nhom5
         }
 
         private void txtSearchId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerForm_Load(object sender, EventArgs e)
         {
 
         }

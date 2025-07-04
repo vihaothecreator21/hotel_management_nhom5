@@ -67,7 +67,7 @@
             this.txtIdentity.SelectedText = "";
             this.txtIdentity.Size = new System.Drawing.Size(251, 48);
             this.txtIdentity.TabIndex = 0;
-            this.txtIdentity.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged_1);
+       //     this.txtIdentity.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged_1);
             // 
             // txtName
             // 
@@ -87,7 +87,7 @@
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(251, 46);
             this.txtName.TabIndex = 2;
-            this.txtName.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
+          //  this.txtName.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // lbname
             // 
@@ -106,7 +106,7 @@
             this.lbiden.Size = new System.Drawing.Size(62, 20);
             this.lbiden.TabIndex = 6;
             this.lbiden.Text = "Identity:";
-            this.lbiden.Click += new System.EventHandler(this.label2_Click);
+         //   this.lbiden.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbphone
             // 
@@ -116,7 +116,7 @@
             this.lbphone.Size = new System.Drawing.Size(53, 20);
             this.lbphone.TabIndex = 7;
             this.lbphone.Text = "Phone:";
-            this.lbphone.Click += new System.EventHandler(this.label3_Click);
+
             // 
             // flowRooms
             // 
@@ -125,7 +125,7 @@
             this.flowRooms.Name = "flowRooms";
             this.flowRooms.Size = new System.Drawing.Size(1067, 450);
             this.flowRooms.TabIndex = 9;
-            this.flowRooms.Paint += new System.Windows.Forms.PaintEventHandler(this.flowRooms_Paint);
+   
             // 
             // INFORMATION
             // 
@@ -161,7 +161,7 @@
             this.txtPhone.SelectedText = "";
             this.txtPhone.Size = new System.Drawing.Size(251, 48);
             this.txtPhone.TabIndex = 9;
-            this.txtPhone.TextChanged += new System.EventHandler(this.guna2TextBox5_TextChanged);
+       
             // 
             // btnSubmit
             // 
@@ -197,7 +197,7 @@
             this.label5.Size = new System.Drawing.Size(162, 25);
             this.label5.TabIndex = 0;
             this.label5.Text = "Available Room";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+           // this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // guna2GradientPanel2
             // 
@@ -234,6 +234,7 @@
             this.Controls.Add(this.flowRooms);
             this.Name = "BookingForm";
             this.Text = "BookingForm";
+          //  this.Load += new System.EventHandler(this.BookingForm_Load);
             this.INFORMATION.ResumeLayout(false);
             this.INFORMATION.PerformLayout();
             this.guna2GradientPanel1.ResumeLayout(false);

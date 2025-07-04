@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
+using System.Data.Entity;                      // dùng cho Include
 using hotel_management_nhom5.Data;
 using hotel_management_nhom5.Models;
 using hotel_management_nhom5.Repositories.Interfaces;
@@ -21,6 +22,16 @@ namespace hotel_management_nhom5.Repositories.Implementations
                .FirstOrDefault(r => r.CustomerId == custId
                                  && r.Status != BookingStatus.CheckedOut);
 
+        // ← Thêm phương thức này cho interface GetByIdentity
+        public Booking GetByIdentity(string identityNumber) =>
+            _db.Bookings
+               .Include(b => b.Customer)
+               .Include(b => b.Room)
+               .FirstOrDefault(b =>
+                   b.Customer.IdentityCard == identityNumber
+                   && b.Status != BookingStatus.CheckedOut
+               );
+
         public void Add(Booking r)
         {
             _db.Bookings.Add(r);
@@ -29,7 +40,7 @@ namespace hotel_management_nhom5.Repositories.Implementations
 
         public void Update(Booking r)
         {
-            _db.Entry(r).State = System.Data.Entity.EntityState.Modified;
+            _db.Entry(r).State = EntityState.Modified;
             _db.SaveChanges();
         }
     }

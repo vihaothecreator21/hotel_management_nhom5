@@ -15,6 +15,7 @@ namespace hotel_management_nhom5
         public Login()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
@@ -41,6 +42,11 @@ namespace hotel_management_nhom5
                 txtPassword.Clear();
                 txtUsername.Focus();
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
