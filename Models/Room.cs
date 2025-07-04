@@ -7,10 +7,12 @@ namespace hotel_management_nhom5.Models
     {
         public int RoomId { get; set; }
         public string RoomNumber { get; set; }
-        [Column("Room_number")]
         public string Type { get; set; }
+        public string ImageKey { get; set; }
         public decimal Price { get; set; }
         public string Status { get; set; }
+        public int Capacity { get; set; }
+        public string Description { get; set; }
 
         // Navigation
         public List<Booking> Bookings { get; set; } = new List<Booking>();

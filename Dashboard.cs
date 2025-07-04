@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using hotel_management_nhom5.Controllers;
 using hotel_management_nhom5.Data;
 
 
@@ -12,9 +13,6 @@ namespace hotel_management_nhom5
         {
             InitializeComponent();
             this.FormClosed += (s, e) => Application.Exit();
-           
-
-
         }
 
         private void OpenBookingForm()
@@ -118,6 +116,12 @@ namespace hotel_management_nhom5
         private void btnCustomers_Click(object sender, EventArgs e)
         {
             using (var f = new CustomerForm())
+                f.ShowDialog();
+        }
+
+        private void roomBtn_Click(object sender, EventArgs e)
+        {
+            using (var f = new RoomForm())
                 f.ShowDialog();
         }
     }
